@@ -1,6 +1,4 @@
 spring:
-  config:
-    import: "consul:"
 
   cloud:
     consul:
