@@ -1,11 +1,24 @@
 spring:
+  config:
+    import: "consul:"
+
   cloud:
     consul:
       host: ${CONSUL_HOST:localhost}
       port: ${CONSUL_PORT:8500}
+      config:
+        enabled: true
+        name: crytographie
 
   rabbitmq:
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}
+    exchange: email.exchange
+    routingkey: email.routingkey
+    queue: email.queue
+
+
+  main:
+    banner-mode: off
