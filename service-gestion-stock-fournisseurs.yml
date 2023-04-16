@@ -1,0 +1,26 @@
+
+server:
+  port: 8084
+
+spring:
+  data:
+    mongodb:
+      database: ${DB_NAME:gestionStock}
+      host: ${DB_HOST:localhost}
+      port: ${DB_PORT:27017}
+
+  rabbitmq:
+
+    #### Modif stock####
+    exchange-stock: stock.exchange
+    queue: stock.queue
+    routingkey-stock: stock.routingkey
+
+    #### Exchange des factures ####
+    exchange-facture: facture.exchange
+    routingkey-facture-fournisseur : factureCmd.routingKey
+    routingkey-facture-patient: facture.routingKey
+
+    ### Exchange stock bas ###
+    exchange-notification: email.exchange
+    routingkey-notification: notification.routingkey

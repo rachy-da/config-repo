@@ -1,0 +1,20 @@
+
+server:
+  port: 8083
+
+spring:
+  data:
+    mongodb:
+      database: ${DB_NAME:rdvpatients}
+      host: ${DB_HOST:localhost}
+      port: ${DB_PORT:27018}
+
+  rabbitmq:
+
+   #  Communication Service Notification
+    exchange-email: email.exchange
+    routingkey-email: email.routingKey
+
+    #  Communication Service Stock
+    exchange-stock: stock.exchange
+    routingkey-stock: stock.routingkey
