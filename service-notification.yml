@@ -17,6 +17,18 @@ spring:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+    
+    
+   rabbitmq:
+    # communication inter-service (email)
+    exchange: email.exchange
+    routingkey: email.routingkey
+    queue: email.queue
+    # communication inter-service (notification)
+    routingkey-notification: notification.routingkey
+    queue-notification: notification.queue
+
+   
 
 
 
