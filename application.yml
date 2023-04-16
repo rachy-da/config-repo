@@ -16,7 +16,7 @@
 # partage publickey version 2
 jwt:
   public:
-    key: ${keypair/publicKey}
+    key: ${publicKey}
       
 spring:
 
