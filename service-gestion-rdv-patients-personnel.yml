@@ -13,7 +13,7 @@ spring:
 
    #  Communication Service Notification
     exchange-email: email.exchange
-    routingkey-email: email.routingKey
+    routingkey-email: email.routingkey
 
     #  Communication Service Stock
     exchange-stock: stock.exchange
